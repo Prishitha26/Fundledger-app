@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import 'leaflet/dist/leaflet.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Public Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    @apply bg-bg text-ink;
+  }
+  *:focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-bg;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-surface rounded-xl border border-surface-mid shadow-card transition-shadow duration-200;
+  }
+  .card-hover {
+    @apply hover:shadow-card-hover;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg font-semibold text-sm transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-primary {
+    @apply btn bg-primary text-white hover:bg-primary-container active:scale-[0.98];
+  }
+  .btn-secondary {
+    @apply btn bg-surface-mid text-primary hover:bg-surface-high active:scale-[0.98];
+  }
+  .btn-outline {
+    @apply btn border border-outline text-ink hover:bg-surface-low active:scale-[0.98];
+  }
+  .btn-ghost {
+    @apply btn text-ink-secondary hover:bg-surface-low;
+  }
+  .input {
+    @apply w-full px-4 py-2.5 rounded-lg border border-surface-high bg-surface-low text-ink placeholder:text-outline transition-colors duration-200 focus:border-primary focus:bg-surface;
+  }
+  .label {
+    @apply block text-sm font-medium text-ink mb-1.5;
+  }
+  .section-title {
+    @apply text-2xl font-bold text-ink tracking-tight;
+  }
+  .section-subtitle {
+    @apply text-ink-secondary text-base;
+  }
+}
+
+/* Leaflet marker custom styles */
+.leaflet-container {
+  font-family: 'Public Sans', system-ui, sans-serif;
+  z-index: 0;
+}
+.leaflet-popup-content-wrapper {
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 53, 95, 0.12);
+}
+.leaflet-popup-content {
+  margin: 0.75rem 1rem;
+  font-family: 'Public Sans', system-ui, sans-serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #DEE8FF;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0F4C81;
+}

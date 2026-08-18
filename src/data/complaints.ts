@@ -1,0 +1,48 @@
+import type { Complaint } from './types';
+
+export const complaints: Complaint[] = [
+  {
+    id: 'CMP-001',
+    projectId: 'PRJ-KRI-2024-892',
+    projectName: 'Village Road Development',
+    issueType: 'Poor Material Quality',
+    location: 'Denkanikottai, Krishnagiri',
+    description: 'The cement used for the road sub-grade appears to be of substandard quality. Cracks visible after first rain.',
+    status: 'Investigating',
+    createdAt: '2024-11-15',
+    trackingId: 'FL-REP-9921',
+  },
+  {
+    id: 'CMP-002',
+    projectId: 'PRJ-MAD-2024-345',
+    projectName: 'Primary Health Centre Renovation',
+    issueType: 'Financial Irregularity',
+    location: 'Madurai East',
+    description: 'Spending has exceeded the approved budget by ₹8.5 Lakh without any visible additional construction work.',
+    status: 'Under Review',
+    createdAt: '2024-10-20',
+    trackingId: 'FL-REP-9922',
+  },
+  {
+    id: 'CMP-003',
+    projectId: 'PRJ-COV-2024-688',
+    projectName: 'Rural Drinking Water Pipeline — Phase 2',
+    issueType: 'Unexplained Delay',
+    location: 'Coimbatore Rural',
+    description: 'Pipeline work has been stalled for 3 weeks with no workers on site. Estimated completion date has passed.',
+    status: 'Submitted',
+    createdAt: '2024-12-01',
+    trackingId: 'FL-REP-9923',
+  },
+  {
+    id: 'CMP-004',
+    projectId: 'PRJ-KRI-2024-731',
+    projectName: 'Panchayat Union Middle School Upgradation',
+    issueType: 'Other',
+    location: 'Shoolagiri, Krishnagiri',
+    description: 'No safety barriers around the construction site near the school entrance. Children at risk.',
+    status: 'Resolved',
+    createdAt: '2024-08-10',
+    trackingId: 'FL-REP-9924',
+  },
+];
